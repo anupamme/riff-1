@@ -41,6 +41,8 @@ function initUpdater(getWindow) {
   }
   autoUpdater.autoDownload = false;
   autoUpdater.autoInstallOnAppQuit = false;
+  autoUpdater.allowDowngrade = false;
+  autoUpdater.allowPrerelease = false;
 
   const canInstall = process.platform !== 'linux' || !!process.env.APPIMAGE;
   const send = (channel, payload) => {
